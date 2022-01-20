@@ -1,0 +1,14 @@
+{% extends "layout.html" %}
+
+{% block content %}
+
+<h1>You Died!</h1>
+{% if room.name in ["Death", "The End"] %}
+<pre> {{ room.description }} </pre>
+{% else %}
+<p>Looks like you bit the dust.</p>
+{% endif %}
+
+<p><a href="/">Play Again</a></p>
+
+{% endblock %}
